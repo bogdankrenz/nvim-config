@@ -21,6 +21,12 @@ lspconfig.lua_ls.setup {
     }
 }
 
+lspconfig.tsserver.setup {
+    on_attach = on_attach,
+    filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+    cmd = { "typescript-language-server", "--stdio" }
+}
+
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
